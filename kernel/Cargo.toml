@@ -1,0 +1,12 @@
+[package]
+name = "kernel"
+version = "0.1.0"
+edition = "2024"
+
+[[bin]]
+name = "kernel"
+path = "src/kernel.rs"
+test = false    # no test harness on bare metal (yet)
+bench = false
+
+[dependencies]

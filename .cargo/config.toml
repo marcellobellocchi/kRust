@@ -1,8 +1,8 @@
-[build]
-target = "x86_64-unknown-none"
+# No global build.target here: future crates in libs/ are tested on the host.
+# Kernel-only settings apply to the bare-metal target, wherever cargo is run from.
+
+[alias]
+kbuild = "build -p kernel --target x86_64-unknown-none"   # usable from the root
 
 [target.x86_64-unknown-none]
-rustflags = [
-    "-C", "relocation-model=static",
-    "-C", "link-arg=-Tlinker.ld"
-]
+rustflags = ["-C", "relocation-model=static"]

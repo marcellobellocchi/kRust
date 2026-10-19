@@ -1,10 +1,9 @@
-[package]
-name = "kRust"
-version = "0.1.0"
-edition = "2024"
+[workspace]
+resolver = "3"
+members = ["kernel"]   # add "libs/abi", "user/init", ... as they are created
 
-[dependencies]
-
+# Profiles only take effect in the workspace root, never in member crates.
+# The kernel has no unwinding runtime, so a panic must stop instead of unwinding.
 [profile.dev]
 panic = "abort"
 
