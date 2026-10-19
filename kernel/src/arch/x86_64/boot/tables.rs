@@ -66,9 +66,7 @@ static mut P3: PageTable = {
     PageTable(entries)
 };
 static mut P2S: [PageTable; IDENTITY_MAPPED_GIB] = identity_p2s();
-
-
-
+    
 // GDT conf
 
 //first entry mandatory null descriptor

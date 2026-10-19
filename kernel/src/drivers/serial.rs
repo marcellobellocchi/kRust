@@ -1,4 +1,4 @@
-use crate::arch::port::{inb, outb};
+use crate::arch::{inb, outb};
 use core::fmt::{self, Write};
 use core::sync::atomic::{AtomicBool, Ordering};
 

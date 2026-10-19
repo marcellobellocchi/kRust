@@ -40,6 +40,7 @@ kRust/
 │       │       └── smp.rs              # starting other cores
 │       │
 │       ├── boot.rs             # BootInfo type: memory map, framebuffer, RSDP
+│       ├── trap/               # files that manage kernel traps (exceptions, interrupts)
 │       ├── mm/                 # frame allocator, address spaces, heap, mmap
 │       ├── sync/               # spinlocks (IRQ-safe), mutex, rwlock, wait queues
 │       ├── task/               # processes, threads, scheduler
